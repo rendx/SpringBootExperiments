@@ -1,8 +1,10 @@
 package com.huawei.springbootdemo.controller;
 
 import com.huawei.springbootdemo.domain.ServerSettings;
+import com.huawei.springbootdemo.exception.MyExcepiton;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -47,5 +49,10 @@ public class GetController {
         int i = 1/0;
         System.out.println("OK");
         return "OK";
+    }
+
+    @RequestMapping("/v1/exception")
+    private Object testException(){
+        throw new MyExcepiton("500", "MyExcepiton异常");
     }
 }
