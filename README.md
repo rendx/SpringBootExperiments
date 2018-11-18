@@ -1,6 +1,6 @@
 ## Brainwaves Code Generator
 
-This is a project to help people with generating code with his brain wave.
+This is a project to help people with generating code with his brainwaves.
 
 Code of Java/Python/HTML projects will be generated and built automatically just with thinking about it. 
 
