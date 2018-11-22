@@ -17,7 +17,7 @@ public class GetController {
     private Map<Object, Object> params = new HashMap<>();
 
     @GetMapping(path = "/v1/page_user2")
-    public Object pageUserV2(@RequestParam(defaultValue = "0", name = "page") int  from, int size){
+    public Object pageUserV2(@RequestParam(defaultValue = "0", name = "page") int from, int size) {
         params.clear();
         params.put("from", from);
         params.put("size", size);
@@ -26,7 +26,7 @@ public class GetController {
     }
 
     @GetMapping(path = "/v1/page_user1")
-    public Object pageUserV1(@RequestParam(defaultValue = "0", name = "page") int  from, int size){
+    public Object pageUserV1(@RequestParam(defaultValue = "0", name = "page") int from, int size) {
         params.clear();
         params.put("from", from);
         params.put("size", size);
@@ -37,22 +37,25 @@ public class GetController {
     @Autowired
     private ServerSettings serverSettings;
 
-    @GetMapping(path = "/v1/test_properties")
-    public Object testProperties(){
+    @GetMapping(path = "/api/test_properties")
+    public Object testProperties() {
 
         return serverSettings;
     }
 
     @GetMapping(path = "/test/home")
-    private Object apiTest(){
+    private Object apiTest() {
         params.clear();
-        int i = 1/0;
+        int i = 1 / 0;
         System.out.println("OK");
         return "OK";
     }
 
     @RequestMapping("/v1/exception")
-    private Object testException(){
+    private Object testException() {
         throw new MyExcepiton("500", "MyExcepiton异常");
     }
+
+
+
 }
