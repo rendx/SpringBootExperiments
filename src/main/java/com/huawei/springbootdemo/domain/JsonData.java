@@ -48,4 +48,8 @@ public class JsonData implements Serializable {
         this.data = data;
         this.msg = msg;
     }
+
+    public static JsonData buildSuccess(){
+        return new JsonData(200, "success", "腻害");
+    }
 }

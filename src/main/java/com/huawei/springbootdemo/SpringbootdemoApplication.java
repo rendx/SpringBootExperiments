@@ -3,6 +3,7 @@ package com.huawei.springbootdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
@@ -11,6 +12,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @ServletComponentScan
 // 开启定时任务扫描
 @EnableScheduling
+//开启异步任务扫描
+@EnableAsync
 public class SpringbootdemoApplication {
 
     public static void main(String[] args) {
